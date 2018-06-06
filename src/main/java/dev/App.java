@@ -1,5 +1,7 @@
 package dev;
 
+import java.util.ResourceBundle;
+
 import com.github.lalyos.jfiglet.FigletFont;
 
 /**
@@ -14,8 +16,10 @@ public class App
     	//Font: avatar
     	System.out.println( "Hello World!" );
     	
+    	String titre = ResourceBundle.getBundle("application").getString("titre");
+    	
     	// using default font standard.flf, obtained from maven artifact
-        String asciiArt1 = FigletFont.convertOneLine("App");
+        String asciiArt1 = FigletFont.convertOneLine(titre);
         System.out.println(asciiArt1);
     	
     }
